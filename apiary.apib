@@ -42,11 +42,11 @@ When the job is completed you will receive an email containing a link to the HDF
 - optionally compressed with gzip or bz2, indicated by the file extensions csv.gz or csv.bz2
 - no headers, the first column is assumed to be the image urls
 - during processing, images in the csv file will be fetched and resized to 227x227.  Your job will be processed faster if you resize your images before submitting the job.
-- at present there is a maximum row limit of 25k.  If you wish to process more than 25k images, split them into several jobs.
+- at present there is a maximum row limit of 25k.  If you wish to process more than 25k images, split them into several jobs.  If you have more detailed requirements contact us for support.
 
 ### Output format
 1. A HDF5 file, compressed with the zlib filter
-2. the file contains the following datasets
+2. the file contains the following HDF5 datasets
   1. processed_urls
 
         the image urls that were succesfully processed  
