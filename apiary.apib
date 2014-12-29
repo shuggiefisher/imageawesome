@@ -22,6 +22,8 @@ This endpoint is primarily for demonstration purposes.  If you wish to process a
 ## Extract features from many images [/image/job]
 Extract features from multiple images specified in a CSV file.
 
+If you do not wish to specify a publicly accessible CSV file, please use the job upload form on our website.
+
 When the job is completed you will receive an email containing a link to the HDF5 output.  The email will be sent to the primary email address of your github account.
 
 #### CSV input format
@@ -31,23 +33,31 @@ When the job is completed you will receive an email containing a link to the HDF
 - at present there is a maximum row limit of 25k.  If you wish to process more than 25k images, split them into several jobs.
 
 #### Output format
-- A HDF5 file, compressed with the zlib filter
-- the file contains the following datasets:
-..1. processed_urls
-... the image urls that were succesfully processed
-..2. features
-... the image features for each successfully processed url
-..3. unprocessed_urls
-... any image urls which were not processed sucessfully
-..4. status
-... information about the error encountered for each unprocessed_url.  Common sources of error may be 404, 403, or 500 errors when requesting the images, or problems processing the requested image.
-- the HDF5 file can be previewed using [HDFView](http://www.hdfgroup.org/products/java/hdfview/), or read programmatically using a library in your language of choice.
+1. A HDF5 file, compressed with the zlib filter
+2. the file contains the following datasets
+  1. processed_urls
+
+        the image urls that were succesfully processed  
+
+  2. features
+
+        the image features for each successfully processed url.  4096 float32 values per row.  
+
+  3. unprocessed_urls
+
+        any image urls which were not processed sucessfully  
+
+  4. status
+
+        information about the error encountered for each unprocessed_url.  Common sources of error may be 404, 403, or 500 errors when requesting the images, or problems processing the requested image.  
+
+3. the HDF5 file can be previewed using [HDFView](http://www.hdfgroup.org/products/java/hdfview/), or read programmatically using a library in your language of choice.
 
 ### Submit a CSV of image urls [POST]
 + Response 200 (application/json)
 
         {
-            "url": "http://amazonaws.com/mybucket/abc123.csv.gz",
+            "url": "http://s3.amazonaws.com/mybucket/abc123.csv.gz",
             "key": "abcde12345"
         }
 
