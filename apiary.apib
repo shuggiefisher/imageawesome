@@ -1,9 +1,9 @@
 FORMAT: 1A
 
 # image awesome
-Image Awesome API helps you simple image models from deep neural networks.
+Image Awesome API helps you build machine learning models from deep neural networks.
 
-## Image features [/image/features]
+## Extract features from a single image [/image/features]
 Extract the features from a single image.
 
 Your image will be passed through a deep convolutional neural network trained on the imagenet dataset.  The activity of the penultimate layer in the network will be returned as 4096 float32 array.  The "features" extracted by the network can be used to build classifiers and regressors for your images.
@@ -29,7 +29,7 @@ When the job is completed you will receive an email containing a link to the HDF
 #### CSV input format
 - optionally compressed with gzip or bz2, indicated by the file extensions csv.gz or csv.bz2
 - no headers, the first column is assumed to be the image urls
-- during processing images in the csv file will be fetched and resized to 227x227.  Your job will be processed faster if you resize your images before submitting the job.
+- during processing, images in the csv file will be fetched and resized to 227x227.  Your job will be processed faster if you resize your images before submitting the job.
 - at present there is a maximum row limit of 25k.  If you wish to process more than 25k images, split them into several jobs.
 
 #### Output format
