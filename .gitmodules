@@ -1,0 +1,3 @@
+[submodule "plugins"]
+	path = plugins
+	url = git@shuggiefisher-github.com:shuggiefisher/pelican-plugins.git
