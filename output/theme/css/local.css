@@ -1,0 +1,46 @@
+
+.my-list-style {
+    margin-left: 0;
+}
+
+.aw-bottom {
+    padding: 2em;
+}
+
+.aw-footer {
+    margin-top: 2em;
+    border-top: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+/*    height: 250px;*/
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.aw-footer li {
+    line-height: 200%;
+}
+
+.summary {
+    margin-bottom: 2em;
+    margin-top: 2em;
+    color: black;
+}
+
+/*.summary pre { display: none; }*/
+
+.prompt {
+    display: none;
+}
+
+.article-body {
+    margin-top: 2em;
+    color: black;
+}
+
+.article-title {
+    margin-bottom: 1em;
+}
+
+.article-header {
+    margin-bottom: 1em;
+}
