@@ -10,10 +10,15 @@ Your image will be passed through a deep convolutional neural network trained on
 
 This endpoint is primarily for demonstration purposes.  If you wish to process a large number of images, the /image/job endpoint will be much faster.
 
+You may optionally include your API key when submitting an image.  You API key is displayed in your settings page on the website.
+
 ### Extract features from an image [POST]
 + Request (application/json)
 
-        { "url": "http://placekitten.com/g/500/500" }
+        { 
+            "url": "http://placekitten.com/g/500/500",
+            "key": "abcde12345 (optional)"
+        }
 
 + Response 200 (application/json)
 
@@ -23,6 +28,8 @@ This endpoint is primarily for demonstration purposes.  If you wish to process a
 Extract features from multiple images specified in a CSV file.
 
 If you do not wish to specify a publicly accessible CSV file, please use the job upload form on our website.
+
+You must include your API key when submitting a job.  You API key is displayed in your settings page on the website.
 
 When the job is completed you will receive an email containing a link to the HDF5 output.  The email will be sent to the primary email address of your github account.
 
