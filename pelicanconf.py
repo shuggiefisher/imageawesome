@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Robert Kyle'
-SITENAME = u'Image Awesome'
+SITENAME = u'Image Awesome Blog'
 SITEURL = ''
 
 PATH = 'content'
@@ -41,3 +41,5 @@ EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
 
 import os
 THEME = os.path.join(os.getcwd(), 'imageawesome_theme')
+
+SITEURL = '//' + os.environ.get('HOST', 'localhost:8000')
