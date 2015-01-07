@@ -1,4 +1,4 @@
-Title: How to build a cat vs dog image classifier using imagenet features
+Title: How to build an image classifier using imagenet features
 Date: 2015-01-03 10:20
 Category: Tutorial
 
