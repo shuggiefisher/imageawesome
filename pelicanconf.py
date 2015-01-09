@@ -42,5 +42,5 @@ EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
 import os
 THEME = os.path.join(os.getcwd(), 'imageawesome_theme')
 
-SITEURL = '//' + os.environ.get('HOST', 'blog.imageawesome.com')
+SITEURL = 'http://' + os.environ.get('BLOGHOST', 'blog.imageawesome.com')
 WEBURL = '//' + os.environ.get('WEBHOST', 'image-awesome.herokuapp.com')

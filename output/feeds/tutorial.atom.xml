@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Image Awesome Blog</title><link href="http://shuggiefisher.github.io/imageawesome/" rel="alternate"></link><link href="http://shuggiefisher.github.io/imageawesome/feeds/tutorial.atom.xml" rel="self"></link><id>http://shuggiefisher.github.io/imageawesome/</id><updated>2015-01-08T11:20:00+00:00</updated><entry><title>How to build a Content based Image Retrieval engine</title><link href="http://shuggiefisher.github.io/imageawesome/how-to-build-a-content-based-image-retrieval-engine.html" rel="alternate"></link><updated>2015-01-08T11:20:00+00:00</updated><author><name>Robert Kyle</name></author><id>tag:shuggiefisher.github.io,2015-01-08:imageawesome/how-to-build-a-content-based-image-retrieval-engine.html</id><summary type="html">&lt;p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Image Awesome Blog</title><link href="http://shuggiefisher.github.io/imageawesome/" rel="alternate"></link><link href="http://shuggiefisher.github.io/imageawesome/feeds/tutorial.atom.xml" rel="self"></link><id>http://shuggiefisher.github.io/imageawesome/</id><updated>2015-01-08T11:21:00+00:00</updated><entry><title>How to build a Content based Image Retrieval engine</title><link href="http://shuggiefisher.github.io/imageawesome/how-to-build-a-content-based-image-retrieval-engine.html" rel="alternate"></link><updated>2015-01-08T11:21:00+00:00</updated><author><name>Robert Kyle</name></author><id>tag:shuggiefisher.github.io,2015-01-08:imageawesome/how-to-build-a-content-based-image-retrieval-engine.html</id><summary type="html">&lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
@@ -22861,7 +22861,7 @@ QmCC
 &lt;p&gt;We&amp;#39;ve shown with a very small dataset, that it is possible to use the imagenet features extracted by image awesome to build a Content Based Image Retrieval engine that works with natural images, including images that it was not trained on.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>How to build an image classifier using imagenet features</title><link href="http://shuggiefisher.github.io/imageawesome/how-to-build-an-image-classifier-using-imagenet-features.html" rel="alternate"></link><updated>2015-01-03T10:20:00+00:00</updated><author><name>Robert Kyle</name></author><id>tag:shuggiefisher.github.io,2015-01-03:imageawesome/how-to-build-an-image-classifier-using-imagenet-features.html</id><summary type="html">&lt;p&gt;
+&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>How to build an image classifier using imagenet features</title><link href="http://shuggiefisher.github.io/imageawesome/how-to-build-an-image-classifier-using-imagenet-features.html" rel="alternate"></link><updated>2015-01-03T10:21:00+00:00</updated><author><name>Robert Kyle</name></author><id>tag:shuggiefisher.github.io,2015-01-03:imageawesome/how-to-build-an-image-classifier-using-imagenet-features.html</id><summary type="html">&lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
@@ -23033,7 +23033,6 @@ In&amp;nbsp;[7]:
 &lt;p&gt;Now we can upload this CSV for processing.  To create a job you&amp;#39;ll need a image awesome account, which you can create by signing in with github.  Visit &lt;a href="http://imageawesome.com/upload"&gt;http://imageawesome.com/upload&lt;/a&gt; and use the form to upload your file.&lt;/p&gt;
 &lt;p&gt;Image awesome will scan though your CSV, download and resize each image, and run it through a deep convolutional network.  The activity of penultimate layer will be returned as the &amp;quot;features&amp;quot; of the image.&lt;/p&gt;
 &lt;p&gt;When your job has completed you should receive an email with a link to the results.&lt;/p&gt;
-&lt;p&gt;The results are stored in HDF5 format.  Let&amp;#39;s load them, and use them to train our cat-or-dog classifier&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -23729,7 +23728,7 @@ Good predictions [Width, Height]: [ 375.28  425.84]
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;so the network tends to perform more poorly when predicting from lower resolution images.  We can try and improve our model, but this won&amp;#39;t help us much if the signal in the input data isn&amp;#39;t good enough to begin with.&lt;/p&gt;
+&lt;p&gt;so the network tends to perform more poorly when predicting from lower resolution images.  We can try and improve our model, but this won&amp;#39;t help us much if the signal in the input data isn&amp;#39;t great to begin with.&lt;/p&gt;
 &lt;h3 id="impact-of-image-cropping"&gt;Impact of image cropping&lt;/h3&gt;
 &lt;p&gt;let&amp;#39;s center crop the images, so we can see how they look when presented to the network&lt;/p&gt;
 &lt;/div&gt;
@@ -23762,8 +23761,8 @@ In&amp;nbsp;[32]:
     &lt;span class="n"&gt;center_cropped_image&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;resized_image&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;crop&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;crop&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;crop&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;crop&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;:]&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;center_cropped_image&lt;/span&gt;
  
-&lt;span class="n"&gt;bad_images&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;center_crop_image&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;/Users&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/Volumes/Media/kaggle&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;bad_prediction_urls&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;good_images&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;center_crop_image&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;/Users&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/Volumes/Media/kaggle&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;good_prediction_urls&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;bad_images&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;center_crop_image&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;bad_prediction_urls&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;good_images&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;center_crop_image&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;good_prediction_urls&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
