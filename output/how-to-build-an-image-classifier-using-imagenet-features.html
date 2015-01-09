@@ -1715,7 +1715,7 @@ jQuery(document).ready(function($) {
 		<span itemprop="author" itemscope itemtype="http://schema.org/Person">
 			<h4 itemprop="name">Robert Kyle</h4>
 		</span>
-		<time datetime="2015-01-03T10:21:00+00:00" itemprop="datePublished">Sat 03 January 2015</time>
+		<time datetime="2015-01-03T10:22:00+00:00" itemprop="datePublished">Sat 03 January 2015</time>
 	</div>
 	<div>
 		Category:
@@ -1729,8 +1729,8 @@ jQuery(document).ready(function($) {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To show you how to use the features extracted by image awesome, we&#39;re going to run through a quick tutorial of how to build a cat-vs-dog classifier.  This approach is likely to work well for natural image datasets which overlap with the images in the <a href="http://www.image-net.org/">imagenet database</a>.</p>
-<p>We&#39;re going to show you how to do this in python, but the same process can be done in any language.</p>
+<p>To show you how to use the features extracted by image awesome, I&#39;m going to run through a quick tutorial of how to build a cat-or-dog classifier.  This approach to building a classifier can be applied to any categories, but is likely to work best for natural image datasets which overlap with the images in the <a href="http://www.image-net.org/">imagenet database</a>.</p>
+<p>I&#39;m going to show you how to do this in python, but the same process can be done in any language.</p>
 <h2 id="1-data-preparation">1. Data preparation</h2>
 <h3 id="1-1-upload-the-images">1.1 Upload the images</h3>
 <p>Download <a href="https://www.kaggle.com/c/dogs-vs-cats">dogs vs cats dataset</a> from kaggle</p>
@@ -1789,7 +1789,7 @@ In&nbsp;[8]:
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">&#39;filename&#39;</span><span class="p">:</span> <span class="n">filenames</span><span class="p">})</span>
 
-<span class="c"># we need to prefix the filenames with the s3 bucket url</span>
+<span class="c"># prefix the filenames with the s3 bucket url</span>
 <span class="n">df</span><span class="p">[</span><span class="s">&#39;url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;http://s3.amazonaws.com/mydomain-dogsvscats/&#39;</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;filename&#39;</span><span class="p">]</span>
 
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -1892,7 +1892,7 @@ In&nbsp;[7]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="2-upload-the-csv-file-to-image-awesome-for-processing">2.  Upload the CSV file to image awesome for processing</h2>
-<p>Now we can upload this CSV for processing.  To create a job you&#39;ll need a image awesome account, which you can create by signing in with github.  Visit <a href="http://imageawesome.com/upload">http://imageawesome.com/upload</a> and use the form to upload your file.</p>
+<p>Now we can upload this CSV for processing.  To create a job you&#39;ll need a image awesome account, which you can create by signing in with github.  Visit <a href="http://www.imageawesome.com/upload">http://www.imageawesome.com/upload</a> and use the form to upload your file.</p>
 <p>Image awesome will scan though your CSV, download and resize each image, and run it through a deep convolutional network.  The activity of penultimate layer will be returned as the &quot;features&quot; of the image.</p>
 <p>When your job has completed you should receive an email with a link to the results.</p>
 </div>
@@ -1959,7 +1959,7 @@ In&nbsp;[16]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>So for each image we now have 4096 float32 values which contain the features extracted by the neural network.  We&#39;ll use these features as the input to our cat-or-dog classifier.  First we need to label the images that were processed successfully as cat or dog using the filename.</p>
+<p>So for each image we now have 4096 float32 values which contain the features extracted by the neural network.  We&#39;ll use these features as the input to our cat-or-dog classifier.  First we need to label the images that were processed successfully as a cat or a dog using the filename.</p>
 </div>
 </div>
 </div>
@@ -1986,7 +1986,7 @@ In&nbsp;[3]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To quantify the performance of our cat-or-dog classifier, we&#39;ll need to split the data into a training and a test set.  We&#39;ll also add an index to the dataset, so that we can relate the predictions back to the image urls at a later date.</p>
+<p>To quantify the performance of our cat-or-dog classifier, we&#39;ll need to split the data into a training and a test set.  We&#39;ll also add an index to the dataset, so that we can relate the predictions back to the image urls later on.</p>
 </div>
 </div>
 </div>
@@ -2082,7 +2082,7 @@ Predicting:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>now let&#39;s use our trained classifer to make some predictions about the data which it has not seen</p>
+<p>The model has been trained on 25,000 images in just over a second.  Now let&#39;s use our trained classifer to make some predictions about the data which it has not seen</p>
 </div>
 </div>
 </div>
@@ -2093,7 +2093,7 @@ In&nbsp;[7]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="n">is_cat_predictions</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_features</span><span class="p">)</span>
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%</span><span class="k">time</span> <span class="n">is_cat_predictions</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_features</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2302,8 +2302,7 @@ dogs are correctly predicted 93.61% of the time
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Already we can see the advantages of training the model on imagenet features, over finetuning.
-If we finetune - ie. retrain the neural network - we can potentially get better performance, but
+<p>If we finetune - ie. retrain the neural network - we can potentially get better performance, but
 at the computational cost of having to simulate the training phase for a 8 layer convolutional neural network.</p>
 <p>By using a simple linear classifier we can train the model on 22.5k images in &lt; 2s on a laptop.
 And with linear classifier there are implementations that will allows us to scale out this approach indefinitely
@@ -27278,21 +27277,6 @@ V0mtYx3rWMc61rGOdazj5zrWgHUd61jHOtaxjnWsYx0/17EGrOtYxzrWsY51rGMd6/i5jjVgXcc6
 <p>Also dogs with pointy-ears tend to get misclassified as cats!</p>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight-ipynb"><pre class="ipynb">
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div></p></div>
 	<hr>
 	<h2>Comments</h2>
