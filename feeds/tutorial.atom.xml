@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Image Awesome Blog</title><link href="http://shuggiefisher.github.io/imageawesome/" rel="alternate"></link><link href="http://shuggiefisher.github.io/imageawesome/feeds/tutorial.atom.xml" rel="self"></link><id>http://shuggiefisher.github.io/imageawesome/</id><updated>2015-01-08T11:21:00+00:00</updated><entry><title>How to build a Content based Image Retrieval engine</title><link href="http://shuggiefisher.github.io/imageawesome/how-to-build-a-content-based-image-retrieval-engine.html" rel="alternate"></link><updated>2015-01-08T11:21:00+00:00</updated><author><name>Robert Kyle</name></author><id>tag:shuggiefisher.github.io,2015-01-08:imageawesome/how-to-build-a-content-based-image-retrieval-engine.html</id><summary type="html">&lt;p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Image Awesome Blog</title><link href="http://shuggiefisher.github.io/imageawesome/" rel="alternate"></link><link href="http://shuggiefisher.github.io/imageawesome/feeds/tutorial.atom.xml" rel="self"></link><id>http://shuggiefisher.github.io/imageawesome/</id><updated>2015-01-08T11:22:00+00:00</updated><entry><title>How to build a Content based Image Retrieval engine</title><link href="http://shuggiefisher.github.io/imageawesome/how-to-build-a-content-based-image-retrieval-engine.html" rel="alternate"></link><updated>2015-01-08T11:22:00+00:00</updated><author><name>Robert Kyle</name></author><id>tag:shuggiefisher.github.io,2015-01-08:imageawesome/how-to-build-a-content-based-image-retrieval-engine.html</id><summary type="html">&lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;In this tutorial we&amp;#39;re going to show you how you can use the image features provided by image awesome to build a content based image retrieval engine for your images.  This could be useful in surfacing similar content, detecting duplicate products in your database, or finding unlicensed usage of your images.&lt;/p&gt;
-&lt;p&gt;To demonstrate this we&amp;#39;re going to use a corpus of images collected from flickr.  We&amp;#39;ll show you how to do it in python, but all of these tasks can be done in any language&lt;/p&gt;
+&lt;p&gt;In this tutorial I&amp;#39;m going to show you how you can use the image features provided by image awesome to build a content based image retrieval engine for your images.  This could be useful in surfacing similar content, detecting duplicate products in your database, or finding unlicensed usage of your images.&lt;/p&gt;
+&lt;p&gt;To demonstrate this I&amp;#39;m going to use a corpus of images collected from flickr.  I&amp;#39;ll show you how to do it in python, but all of these tasks can be done in any language&lt;/p&gt;
 &lt;h2 id="1-the-dataset"&gt;1. The dataset&lt;/h2&gt;
 &lt;p&gt;First let&amp;#39;s download the dataset:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;curl -o flickr_style.csv.gz https://raw.githubusercontent.com/BVLC/caffe/master/examples/finetune_flickr_style/flickr_style.csv.gz&lt;/code&gt;&lt;/p&gt;
@@ -12166,7 +12166,7 @@ evTo0aNHjx49XtboC9YePXr06NGjR48eL2v8D/OTfxB4Gy4FAAAAAElFTkSuQmCC
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;the results are quite impressive given how small our sample is - 20,000 images.&lt;/p&gt;
-&lt;p&gt;The benefits of using imagenet features for this similarity search, is that the performance (in terms of distance) is a function of the size and breadth of the imagenet database, rather than the size of our relatively small dataset. However, if we a small dataset, the nearest neighbour may be a large distance away.&lt;/p&gt;
+&lt;p&gt;The benefits of using imagenet features for this similarity search, is that the performance (in terms of the distance metric) is a function of the size and breadth of the imagenet database, rather than the size of our relatively small dataset.&lt;/p&gt;
 &lt;p&gt;To demonstrate that the performance of the search is not strongly dependent on the fitting of the LSHForest, let&amp;#39;s render some results from images that were not seen the the LSHForest algorithm.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -22861,14 +22861,14 @@ QmCC
 &lt;p&gt;We&amp;#39;ve shown with a very small dataset, that it is possible to use the imagenet features extracted by image awesome to build a Content Based Image Retrieval engine that works with natural images, including images that it was not trained on.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>How to build an image classifier using imagenet features</title><link href="http://shuggiefisher.github.io/imageawesome/how-to-build-an-image-classifier-using-imagenet-features.html" rel="alternate"></link><updated>2015-01-03T10:21:00+00:00</updated><author><name>Robert Kyle</name></author><id>tag:shuggiefisher.github.io,2015-01-03:imageawesome/how-to-build-an-image-classifier-using-imagenet-features.html</id><summary type="html">&lt;p&gt;
+&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>How to build an image classifier using imagenet features</title><link href="http://shuggiefisher.github.io/imageawesome/how-to-build-an-image-classifier-using-imagenet-features.html" rel="alternate"></link><updated>2015-01-03T10:22:00+00:00</updated><author><name>Robert Kyle</name></author><id>tag:shuggiefisher.github.io,2015-01-03:imageawesome/how-to-build-an-image-classifier-using-imagenet-features.html</id><summary type="html">&lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;To show you how to use the features extracted by image awesome, we&amp;#39;re going to run through a quick tutorial of how to build a cat-vs-dog classifier.  This approach is likely to work well for natural image datasets which overlap with the images in the &lt;a href="http://www.image-net.org/"&gt;imagenet database&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;We&amp;#39;re going to show you how to do this in python, but the same process can be done in any language.&lt;/p&gt;
+&lt;p&gt;To show you how to use the features extracted by image awesome, I&amp;#39;m going to run through a quick tutorial of how to build a cat-or-dog classifier.  This approach to building a classifier can be applied to any categories, but is likely to work best for natural image datasets which overlap with the images in the &lt;a href="http://www.image-net.org/"&gt;imagenet database&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I&amp;#39;m going to show you how to do this in python, but the same process can be done in any language.&lt;/p&gt;
 &lt;h2 id="1-data-preparation"&gt;1. Data preparation&lt;/h2&gt;
 &lt;h3 id="1-1-upload-the-images"&gt;1.1 Upload the images&lt;/h3&gt;
 &lt;p&gt;Download &lt;a href="https://www.kaggle.com/c/dogs-vs-cats"&gt;dogs vs cats dataset&lt;/a&gt; from kaggle&lt;/p&gt;
@@ -22927,7 +22927,7 @@ In&amp;nbsp;[8]:
 
 &lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DataFrame&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;filename&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;filenames&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 
-&lt;span class="c"&gt;# we need to prefix the filenames with the s3 bucket url&lt;/span&gt;
+&lt;span class="c"&gt;# prefix the filenames with the s3 bucket url&lt;/span&gt;
 &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;http://s3.amazonaws.com/mydomain-dogsvscats/&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;filename&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 
 &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -23030,7 +23030,7 @@ In&amp;nbsp;[7]:
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="2-upload-the-csv-file-to-image-awesome-for-processing"&gt;2.  Upload the CSV file to image awesome for processing&lt;/h2&gt;
-&lt;p&gt;Now we can upload this CSV for processing.  To create a job you&amp;#39;ll need a image awesome account, which you can create by signing in with github.  Visit &lt;a href="http://imageawesome.com/upload"&gt;http://imageawesome.com/upload&lt;/a&gt; and use the form to upload your file.&lt;/p&gt;
+&lt;p&gt;Now we can upload this CSV for processing.  To create a job you&amp;#39;ll need a image awesome account, which you can create by signing in with github.  Visit &lt;a href="http://www.imageawesome.com/upload"&gt;http://www.imageawesome.com/upload&lt;/a&gt; and use the form to upload your file.&lt;/p&gt;
 &lt;p&gt;Image awesome will scan though your CSV, download and resize each image, and run it through a deep convolutional network.  The activity of penultimate layer will be returned as the &amp;quot;features&amp;quot; of the image.&lt;/p&gt;
 &lt;p&gt;When your job has completed you should receive an email with a link to the results.&lt;/p&gt;
 &lt;/div&gt;
@@ -23097,7 +23097,7 @@ In&amp;nbsp;[16]:
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;So for each image we now have 4096 float32 values which contain the features extracted by the neural network.  We&amp;#39;ll use these features as the input to our cat-or-dog classifier.  First we need to label the images that were processed successfully as cat or dog using the filename.&lt;/p&gt;
+&lt;p&gt;So for each image we now have 4096 float32 values which contain the features extracted by the neural network.  We&amp;#39;ll use these features as the input to our cat-or-dog classifier.  First we need to label the images that were processed successfully as a cat or a dog using the filename.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -23124,7 +23124,7 @@ In&amp;nbsp;[3]:
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;To quantify the performance of our cat-or-dog classifier, we&amp;#39;ll need to split the data into a training and a test set.  We&amp;#39;ll also add an index to the dataset, so that we can relate the predictions back to the image urls at a later date.&lt;/p&gt;
+&lt;p&gt;To quantify the performance of our cat-or-dog classifier, we&amp;#39;ll need to split the data into a training and a test set.  We&amp;#39;ll also add an index to the dataset, so that we can relate the predictions back to the image urls later on.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -23220,7 +23220,7 @@ Predicting:
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;now let&amp;#39;s use our trained classifer to make some predictions about the data which it has not seen&lt;/p&gt;
+&lt;p&gt;The model has been trained on 25,000 images in just over a second.  Now let&amp;#39;s use our trained classifer to make some predictions about the data which it has not seen&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -23231,7 +23231,7 @@ In&amp;nbsp;[7]:
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;is_cat_predictions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;classifier&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;predict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;test_features&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;time&lt;/span&gt; &lt;span class="n"&gt;is_cat_predictions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;classifier&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;predict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;test_features&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
@@ -23440,8 +23440,7 @@ dogs are correctly predicted 93.61% of the time
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Already we can see the advantages of training the model on imagenet features, over finetuning.
-If we finetune - ie. retrain the neural network - we can potentially get better performance, but
+&lt;p&gt;If we finetune - ie. retrain the neural network - we can potentially get better performance, but
 at the computational cost of having to simulate the training phase for a 8 layer convolutional neural network.&lt;/p&gt;
 &lt;p&gt;By using a simple linear classifier we can train the model on 22.5k images in &amp;lt; 2s on a laptop.
 And with linear classifier there are implementations that will allows us to scale out this approach indefinitely
@@ -48416,19 +48415,4 @@ V0mtYx3rWMc61rGOdazj5zrWgHUd61jHOtaxjnWsYx0/17EGrOtYxzrWsY51rGMd6/i5jjVgXcc6
 &lt;p&gt;Also dogs with pointy-ears tend to get misclassified as cats!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[]:
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
 &lt;/div&gt;&lt;/p&gt;</summary></entry></feed>
