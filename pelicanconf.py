@@ -42,6 +42,6 @@ import os
 THEME = os.path.join(os.getcwd(), 'imageawesome_theme')
 
 SITEURL = 'http://' + os.environ.get('BLOGHOST', 'blog.imageawesome.com')
-WEBURL = '//' + os.environ.get('WEBHOST', 'image-awesome.herokuapp.com')
+WEBURL = '//' + os.environ.get('WEBHOST', 'imageawesome.com')
 
 DISQUS_SITENAME = 'imageawesome'
