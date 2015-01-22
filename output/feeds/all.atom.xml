@@ -22903,7 +22903,7 @@ QmCC
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;I&amp;#39;m going to show you how to do this in python, but the same process can be done in any language.&lt;/p&gt;
+&lt;p&gt;This tutorial will be in python, but the process can be followed in any language.&lt;/p&gt;
 &lt;h2 id="1-data-preparation"&gt;1. Data preparation&lt;/h2&gt;
 &lt;h3 id="1-1-upload-the-images"&gt;1.1 Upload the images&lt;/h3&gt;
 &lt;p&gt;Download &lt;a href="https://www.kaggle.com/c/dogs-vs-cats"&gt;dogs vs cats dataset&lt;/a&gt; from kaggle&lt;/p&gt;
